@@ -1,21 +1,28 @@
 
 
-function addNew(){
+function addNew() {
 
-    if (document.getElementById("Input") == null) {
+    if (document.getElementById("input") == null) {
 
-        let tag = document.createElement("input")
-        tag.setAttribute("id", "input")
-        let element = document.getElementById("input-old")
-        element.replaceWith(tag)
+        let inputList = document.createElement("input")
+        inputList.setAttribute("id", "input")
+        document.getElementById("user-input").appendChild(inputList)
 
         let cancelButton = document.createElement("button")
         cancelButton.setAttribute("id", "cancelButton")
+        cancelButton.setAttribute("onclick", "cancelInput()")
         cancelButton.textContent = "Cancel"
-        let noButton = document.getElementById("cancel-button")
-        noButton.replaceWith(cancelButton)
-
+        document.getElementById("user-input").appendChild(cancelButton)
+         
     } 
-    
-    
 }
+function cancelInput() {
+
+    let removeInput = document.getElementById("input")
+    removeInput.remove()
+
+    let removeCancelButton = document.getElementById("cancelButton")
+    removeCancelButton.remove()
+}
+    
+    
