@@ -9,6 +9,12 @@ function addNew(){
         let element = document.getElementById("input-old")
         element.replaceWith(tag)
 
+        let cancelButton = document.createElement("button")
+        cancelButton.setAttribute("id", "cancelButton")
+        cancelButton.textContent = "Cancel"
+        let noButton = document.getElementById("cancel-button")
+        noButton.replaceWith(cancelButton)
+
     } 
     
     
