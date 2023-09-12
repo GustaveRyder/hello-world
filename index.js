@@ -1,8 +1,15 @@
 
 
 function addNew(){
-    var tag = document.createElement("input")
-    var element = document.getElementById("form")
-    element.appendChild(tag)
+
+    if (document.getElementById("Input") == null) {
+
+        let tag = document.createElement("input")
+        tag.setAttribute("id", "input")
+        let element = document.getElementById("input-old")
+        element.replaceWith(tag)
+
+    } 
+    
     
 }
