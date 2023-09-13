@@ -43,5 +43,19 @@ body {
     background-color: #1b4332;
 }
 
+#enterButton {
+    background-color: #2d6a4f;
+    color: white;
+    border: none;
+    padding: 1%;
+    border-radius: 5px;
+    margin: 5px;
+}
 
+#enterButton:hover {
+    background-color: #40916C;
+}
 
+#enterButton:active {
+    background-color: #1b4332;
+}
