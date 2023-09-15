@@ -1,4 +1,6 @@
 
+// IMPORTANT! I NEED TO THINK ABOUT THIS INTERFACE! I dont think it's user friendly
+
 // adding new to do list
 function addNew() {
 
@@ -41,12 +43,22 @@ function cancelInput() {
 function enterInput(){
 
     let enter = document.getElementById("input").value
-    let unorderedList = document.createElement("p")
-    unorderedList.textContent = "- " + enter
+    let unorderedList = document.createElement("li")
+    unorderedList.textContent = enter
     document.getElementById("toDoList").appendChild(unorderedList)
     cancelInput()
 
+    // actually removes the list by itself, no need for fancy stuff
+    let removeList = document.createElement("button")
+    removeList.textContent = "Delete"
+    removeList.addEventListener("click", function(){
+
+        unorderedList.remove()
+
+    })
+    unorderedList.appendChild(removeList)
+
 }
  
-// next: make delete function for each of the list (idk how to do it)
+// next: adding check marks and display finished task
     
