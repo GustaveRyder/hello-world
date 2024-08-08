@@ -10,17 +10,17 @@
 <body>
     
     <p>Welcome to The Site!</p>
-    <button class="add_new" onclick="addNew()">
-        <div>
-            <img src="./assets/plusimage.png" alt="add new to do list" height="30px">
-            <p style="display: inline-block; top: 50%; transform: translate(0, -75%);">Add New</p>
-        </div>
-    </button>
     
-    <div id="user-input">
-        
-    </div>
-
+    
+    <!--
+        The input & button
+    -->
+    <input type="text" id="userInput">
+    <button onclick="enterInput();document.getElementById('userInput').value = ''" id="enterButton">Add</button>
+    
+    <!--
+        The list
+    -->
     <div>
         <ul id="toDoList">
 
