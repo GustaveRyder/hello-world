@@ -8,19 +8,35 @@
 function enterInput(){
 
     let enter = document.getElementById("userInput").value
+    
+    
     if(enter !== ""){
-        let unorderedList = document.createElement("li")
-        unorderedList.textContent = enter
-        document.getElementById("toDoList").appendChild(unorderedList)
+        let unorderedList = document.createElement("input")
+        unorderedList.setAttribute("type","checkbox")
+        let toDoList = document.createElement("label")
+        let addBreakLine = document.createElement("br")
+        
+        
+
+        toDoList.textContent = enter
+        document.getElementById('userInput').value = ""
+        let attachToTheList = document.getElementById("theList")
+        attachToTheList.appendChild((unorderedList))
+        attachToTheList.appendChild((toDoList))
+        
         // actually removes the list by itself, no need for fancy stuff
         let removeList = document.createElement("button")
         removeList.textContent = "Delete"
         removeList.addEventListener("click", function(){
 
             unorderedList.remove()
+            toDoList.remove()
+            removeList.remove()
+            addBreakLine.remove()
 
         })
-        unorderedList.appendChild(removeList)
+        attachToTheList.appendChild(removeList)
+        attachToTheList.appendChild(addBreakLine)
     }
     
 }
