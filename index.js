@@ -41,5 +41,5 @@ function enterInput(){
     
 }
  
-// next: adding check marks and display finished task
+// next: display finished task
     
