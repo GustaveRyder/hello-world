@@ -1,10 +1,4 @@
 
-// IMPORTANT! I NEED TO THINK ABOUT THIS INTERFACE! I dont think it's user friendly
-
-
-// next: display finished task
-
-    
 
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
@@ -22,7 +16,6 @@ addByEnter.addEventListener("keypress", function(event) {
     }
   });
 
-// adding new to-do list, also clears the input bar
 function enterInput(){
     
     let enter = document.getElementById("userInput").value
@@ -42,7 +35,7 @@ function enterInput(){
         attachToTheList.appendChild(toDoList)
         toDoList.appendChild(listButton)
         
-        // actually removes the list by itself, no need for fancy stuff
+
         let removeList = document.createElement("SPAN")
         removeList.className = "remove"
         let removeTxt = document.createTextNode("\u00D7")
