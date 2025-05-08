@@ -3,25 +3,120 @@
 color palette = https://coolors.co/palette/d8f3dc-b7e4c7-95d5b2-74c69d-52b788-40916c-2d6a4f-1b4332-081c15
 
 */
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #b7e4c7;
+    margin: 0;
+    background-color: #202020;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: no
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background: #e0e0e0;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+ul li:hover {
+    background: #ddd;
+}
+
+ul li:nth-child(odd) {
+    background: #f9f9f9;
+}
+  
+ul li.checked {
+    background: #444444;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
 }
 
 
+.remove {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
+  
+.remove:hover {
+    background-color: #bb1111;
+    color: white;
+}
+
+#input {
+    
+    background-color: #202020;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 0 20px 20px 20px;
+
+}
+
+#input::after {
+
+    content: "";
+    display: table;
+    clear: both;
+
+}
+
+#userInput {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 80%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+    background-color: #e0e0e0;
+}
 
 #enterButton {
-    background-color: #2d6a4f;
-    color: white;
-    border: none;
-    padding: 1%;
-    border-radius: 5px;
-    margin: 5px;
+    padding: 10px;
+    width: 20%;
+    background: #3b3b3b;
+    color: #fff;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
 }
 
 #enterButton:hover {
-    background-color: #40916C;
+    background-color: #3a3a3a;
 }
 
 #enterButton:active {
-    background-color: #1b4332;
+    background-color: #000000;
 }
+
